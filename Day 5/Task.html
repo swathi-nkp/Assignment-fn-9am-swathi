@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 assignment</title>
+</head>
+
+<body>
+    <h1>Student Admission Form</h1>
+    <form>
+        <label>Photo :</label>
+        <input type="file">
+        <br><br>
+
+        <label>Full Name :</label>
+        <input type="text" placeholder= "Capital letter"required>
+        <br><br>
+
+        <label>Gender :</label>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="other" id="other">
+        <label>Others</label>
+        <br><br>
+
+        <label>Age</label>
+        <input type="number" name="Age" min="01" max="100">
+        <br><br>
+
+        <label>Date Of Birth : </label>
+        <input type="date">
+        <br><br>
+
+        <label>Birth Certificate : </label>
+        <input type="file" name="birth certificate">
+        <br><br>
+
+        <label>Mother Tongue:</label>
+        <input type="text" name="Mother tongue">
+        <br><br>
+
+        <label>Nationality :</label>
+        <input type="text" name="Nationality">
+        <br><br>
+
+        <label>Religion</label>
+        <select name="religion">
+            <option value="hindu">Hindu</option>
+            <option value="muslim">Muslim</option>
+            <option value="christian">Christian</option>
+            <option value="others">Others</option>
+        </select>
+        <br><br>
+
+        <label>Community/Caste :</label>
+        <input type="text" name="community/caste">
+        <br><br>
+
+
+        <label>Aadhar No :</label>
+        <input type="text" name="Aadhar no">
+        <br><br>
+
+        <label>Phone :</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" maxlength="10">
+        <br><br>
+
+        <label>Email :</label>
+        <input type="text" name="email">
+        <br><br>
+
+        <label>Address:</label><br>
+        <textarea name="address" rows="3" cols="30"></textarea>
+        <br><br>
+
+        <label>Parent/Guardian :</label>
+        <input type="checkbox" name="Parent/guardian" value="father"> Father
+        <input type="checkbox" name="Parent/guardian" valve="mother"> Mother
+        <input type="checkbox" name="Parent/guardian" value="guardian">Guardian
+        <br><br> 
+
+        <label>Parent No :</label>
+        <input type="tel" pattern="[09-10] {10}" maxlength="10">
+        <br><br>
+
+        <label>Occupation :</label>
+        <input type="text" name="occupation">
+        <br><br>
+
+        <label>Annual Income:</label>
+        <input type="number" name="annual Income">
+        <br><br>
+
+        <label>Medical issues :</label>
+        <input type="radio" value="yes" name="Medical issues">
+        <label>Yes</label>
+        <input type="radio" value="No" name="medical issues">
+        <label>No</label>
+        <br><br>
+
+        <label>Blood group :</label>
+        <select name="Blood group">
+        <option value="A+ve">A+ve</option>
+        <option value="a-ve">A-ve</option>
+        <option value="Btve">B+ve</option>
+        <option value="B-ve">B-ve</option>
+        <option value="o+ve">O+ve</option>  
+        <option value="o-ve">O-ve</option>  
+        <option value="AB+ve">AB+ve</option>
+        <option value="AB-ve">AB-ve</option>
+        <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label>Transfer Certificate :</label>
+        <input type="file">
+        <br><br>
+
+        <label>Identification mark</label>
+        <input type="text" name="Identification mark">
+        <br><br>
+        
+        <input type="Submit" value="submit">
+        <input type="Reset" value="reset">
+        
+
+
+        
+
+
+
+    </form>
+</body>
+
+</html>
