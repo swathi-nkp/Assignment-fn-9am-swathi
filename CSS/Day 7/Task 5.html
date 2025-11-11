@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7-Task 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            margin: 40px;
+        }
+
+        .box {
+            width: 250px;
+            border: 10px solid #0074D9;
+            background-color: #E0F7FF;
+            color: #100101;
+            padding: 10px;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <h1> CSS Box-Sizing Comparison</h1>
+
+        <div class="container">
+            <div class="box content-box">
+                <div class="label">box-sizing: content-box</div>
+                <h3> Fast food</h3>
+                <p>
+                    Fast food is mass-produced, highly processed food prepared for quick service, often containing high
+                    levels of saturated fat, sugar, sodium, and calories.
+                </p>
+            </div>
+            <br><br>
+            <div class="box border-box">
+                <div class="label">box-sizing: border-box</div>
+                <h3>Fast food</h3>
+                <p>
+                  Fast food is mass-produced, highly processed food prepared for quick service, often containing high
+                  levels of saturated fat, sugar, sodium, and calories.
+                </p>
+            </div>
+        </div>
+    </body>
+
+</html>
