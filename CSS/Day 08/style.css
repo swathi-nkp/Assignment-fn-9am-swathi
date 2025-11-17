@@ -1,0 +1,70 @@
+
+
+/* Banner Section */
+.banner {
+  background: url('./360_F_1015522373_Q34xhiDaoR3WzDMQTGYB43RV7BTYYmLC.jpg') 
+              no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-attachment: fixed; /* Fixed background effect */
+}
+
+.title {
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: rotate(-2deg);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  transform: skewX(-5deg);
+}
+
+/* Task 5 */
+
+/* Box 1 - Relative */
+    .box-relative {
+      position: relative;
+      top: 20px;
+      left: 30px;
+      width: 150px;
+      height: 150px;
+      background-color: lightblue;
+      border: 2px solid blue;
+      padding: 10px;
+      
+    }
+
+/* Box 2 - Absolute */
+    .box-absolute {
+      position: absolute;
+      top: 200px;
+      left: 300px;
+      width: 150px;
+      height: 150px;
+      background-color: lightgreen;
+      border: 2px solid green;
+      padding: 10px;
+      
+    }
+
+ /* Box 3 - Fixed */
+    .box-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 150px;
+      height: 150px;
+      background-color: lightcoral;
+      border: 2px solid red;
+      padding: 10px;
+      
+    }
+

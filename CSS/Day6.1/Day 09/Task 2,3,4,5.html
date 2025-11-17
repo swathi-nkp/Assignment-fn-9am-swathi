@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 09</title>
+   <style>
+  /* Task 02*/
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .float-img {
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 150px;
+  }
+
+  p{
+    font-weight: bolder;font-size: 20px;
+  }
+
+  /*Task 03*/
+
+  .flex-container {
+    display: flex;
+    gap: 10px;
+  }
+  .box {
+    flex: 1;
+    background: #ee9292;
+    padding: 20px;
+    text-align: center;
+  }
+/*Task 04*/
+  .center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: #dac2c2;
+  }
+  /*Task 05*/
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .grid div {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+    <h2>Task 02</h2>
+<div class="clearfix">
+  <img src="../headphone.webp" class="float-img" alt="Sample">
+  <p>
+    Wireless freedom with rich, immersive sound. Lightweight, foldable design for travel and everyday use.
+  </p>
+</div>
+<h2> Task 03</h2>
+<div class="flex-container">
+  <div class="box">Best sound quality</div>
+  <div class="box">Comfortable for long use</div>
+  <div class="box">Great for noise cancellation</div>
+</div>
+<br>
+<h2>Task 04</h2>
+<div class="center-wrapper">
+  <div>Wireless headphone</div>
+</div>
+<h2>Task 05</h2>
+<div class="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+
+
+</body>
+</html>
