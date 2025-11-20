@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 10</title>
+  <style>
+    /* Task 01 */
+    .block {
+      display: block;
+      background: lightcoral;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .inline {
+      display: inline;
+      background: lightgreen;
+      padding: 5px;
+    }
+
+    .inline-block {
+      display: inline-block;
+      background: lightblue;
+      padding: 10px;
+      width: 150px;
+      margin: 5px;
+    }
+
+    /* Task 02 */
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .img-left {
+      float: left;
+      width: 150px;
+      margin-right: 10px;
+    }
+
+    .img-right {
+      float: right;
+      width: 150px;
+      margin-left: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    /* Task 03  */
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      background: #eee;
+      padding: 20px;
+    }
+
+    .flex-item {
+      background: #ccc;
+      padding: 20px;
+      width: 100px;
+      text-align: center;
+    }
+
+    /* Task 04 */
+
+
+    .flex-align {
+      display: flex;
+      align-items: flex-start;
+      background: #f3f3f3;
+      height: 150px;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      padding: 20px;
+      background: #ddd;
+    }
+
+    .box.bottom {
+      align-self: flex-end;
+      background: #bbb;
+    }
+
+    /* Task 05 */
+
+
+    .grid-layout {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    header,
+    footer {
+      grid-column: 1 / -1;
+      /* span both columns */
+      background: #ccc;
+      padding: 20px;
+    }
+
+    .col {
+      background: #eaeaea;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<Body>
+
+  <!-- inline, and inline-block example  -->
+
+  <h2>Block, Inline, Inline-Block</h2>
+
+  <div class="block">BLOCK ELEMENT (take full width)</div>
+
+  <span class="inline">INLINE</span>
+  <span class="inline">Sit next to inline elements</span>
+
+  <div class="inline-block">INLINE-BLOCK</div>
+  <div class="inline-block">Sit inline and accept width/height</div><br><hr>
+
+  <!-- Float two images left and right and apply clearfix. -->
+
+  <h1 style="text-align: center;">Nature</h1>
+
+  <div class="clearfix">
+    <img src="./360_F_1015522373_Q34xhiDaoR3WzDMQTGYB43RV7BTYYmLC.jpg" class="img-left" height="150px" width="150px">
+    <img src="./pexels-christian-heitz-285904-842711.jpg" class="img-right" height="150px" width="150px">
+
+    <p>
+      Nature refers to the physical world and everything in it, excluding human creations, such as plants,
+      animals, landscapes, and weather.
+    </p>
+  </div><br><hr>
+
+  <!-- flex container with three boxes evenly spaced -->
+
+  <h2>Flexbox Even Spacing</h2>
+
+  <div class="flex-container">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+  </div><br><hr>
+
+  <!-- one flex item to the bottom using align-self. -->
+
+  <h2>Align-Self Example</h2>
+
+  <div class="flex-align">
+    <div class="box">Top</div>
+    <div class="box bottom">Bottom</div>
+    <div class="box">Top</div>
+  </div><br><hr>
+
+  <!-- 2-column grid layout with a header and footer. -->
+
+  <h2>Grid Layout</h2>
+
+  <div class="grid-layout">
+    <header>Header (spans both columns)</header>
+
+    <div class="col">Column 1</div>
+    <div class="col">Column 2</div>
+
+    <footer>Footer (spans both columns)</footer>
+  </div>
+
+</Body>
+
+</html>

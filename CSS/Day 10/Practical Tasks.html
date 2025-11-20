@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10</title>
+    <style>
+        /* webpage layout using Flexbox instead of floats. */
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #ececec;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        /*  Responsive navbar using Flexbox. */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 15px;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+        }
+
+        /* Dashboard layout using Grid. */
+
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .dash-box {
+            background: #9ccdf4;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        /* Grid and Flexbox  */
+        .mixed-section {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+
+        .mixed-left {
+            background: #bfea54;
+            padding: 20px;
+        }
+
+        .mixed-right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .mixed-right div {
+            background: #acf88b;
+            padding: 20px;
+        }
+
+        /* Build a portfolio page using Grid template areas. */
+
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header header header"
+                "intro  work1  work2  work3"
+                "footer footer footer footer";
+            gap: 15px;
+            padding: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .intro {
+            grid-area: intro;
+            background: #e0e0e0;
+            padding: 20px;
+        }
+
+        .work1 {
+            grid-area: work1;
+            background: #cfcfcf;
+            padding: 20px;
+        }
+
+        .work2 {
+            grid-area: work2;
+            background: #c9c9c9;
+            padding: 20px;
+        }
+
+        .work3 {
+            grid-area: work3;
+            background: #c3c3c3;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+        h2{
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Task 01 -->
+
+    <h2>Flexbox Page Layout</h2>
+
+    <div class="container">
+        <div class="sidebar">Sidebar</div>
+        <div class="main-content">Main Content Area</div>
+    </div><br><hr>
+
+    <!-- Task 02 -->
+
+    <h2>Responsive Flexbox Navbar</h2>
+
+    <nav class="navbar">
+        <div class="logo">My Site</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav><br><hr>
+
+    <!-- Task 03 -->
+
+    <h2> Dashboard Using Grid</h2>
+    <div class="dashboard">
+        <div class="dash-box">Menu</div>
+        <div class="dash-box">Analytics</div>
+        <div class="dash-box">Settings</div>
+    </div><br><hr>
+
+    <!-- Task 04 -->
+
+    <h2> Grid + Flexbox Mixed Section</h2>
+    <div class="mixed-section">
+        <div class="mixed-left">Left Side Content</div>
+        <div class="mixed-right">
+            <div>Item 1</div>
+            <div>Item 2</div>
+        </div>
+    </div><br><hr>
+
+
+    <!-- Task 05 -->
+
+    <h2>Portfolio Page Using Grid Template Areas</h2>
+
+    <div class="portfolio">
+        <header>My Portfolio</header>
+        <div class="intro">About Me</div>
+        <div class="work1">Project 1</div>
+        <div class="work2">Project 2</div>
+        <div class="work3">Project 3</div>
+        <footer>Contact Info</footer>
+    </div><br><hr>
+
+
+
+
+</body>
+
+</html>
