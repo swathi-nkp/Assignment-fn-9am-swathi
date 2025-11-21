@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sha Cosmetics Portfolio – Grid Redesign</title>
+
+    <style>
+
+        /* GLOBAL */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: rgb(245, 181, 124);
+        }
+
+        /* GRID PAGE LAYOUT  */
+        .page {
+            display: grid;
+            grid-template-rows: auto auto auto 1fr auto auto;
+            grid-template-areas:
+                "nav"
+                "hero"
+                "login"
+                "products"
+                "services"
+                "testimonials";
+        }
+
+        /* NAVBAR (GRID) */
+        nav {
+            grid-area: nav;
+            background: #222;
+            color: white;
+            padding: 10px 20px;
+
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+        }
+
+        nav ul {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* HERO SECTION  */
+        .hero {
+            grid-area: hero;
+            height: 300px;
+            background: url('https://via.placeholder.com/900x300') center/cover no-repeat;
+
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /*  LOGIN FORM (GRID) */
+        .login-section {
+            grid-area: login;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            margin: 0 auto;
+            width: 320px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+
+            display: grid;
+            gap: 10px;
+        }
+
+        .form-container input {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .form-container button {
+            padding: 10px;
+            background: rgb(86, 86, 248);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* PRODUCT GALLERY (GRID AUTO-FIT) */
+        .products-section {
+            grid-area: products;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /*  SERVICES SECTION (Former Flex → Now Grid)*/
+        .services-section {
+            grid-area: services;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            padding-top: 10px;
+        }
+
+        .service-box {
+            background: #ffe8c7;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* TESTIMONIALS / EXTRA GRID  */
+        .testimonials-section {
+            grid-area: testimonials;
+            padding: 30px;
+            text-align: center;
+
+            background: rgb(255, 225, 181);
+            border-top: 2px solid #e5b37a;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding-top: 20px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 700px) {
+            nav ul {
+                grid-auto-flow: row;
+                justify-items: center;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .form-container {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Sha Cosmetics</div>
+
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Welcome to Sha Cosmetics</h1>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <section class="login-section">
+        <h2>Login</h2>
+        <div class="form-container">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Submit</button>
+        </div>
+    </section>
+
+
+    <section class="products-section">
+        <h2>Our Products</h2>
+        <div class="gallery">
+            <img src="https://www.shutterstock.com/image-photo/various-cosmetic-products-containers-bottles-600nw-2568529501.jpg">
+            <img src="https://vivecosmetic.com/wp-content/uploads/2024/07/Top-10-Cosmetic-Companies-in-Kerala.jpeg">
+            <img src="https://assets.teenvogue.com/photos/6184454b087dc3c0e7cb3d94/16:9/w_2560%2Cc_limit/GettyImages-1301487903.jpg">
+            <img src="https://kronokare.com/cdn/shop/articles/face-care.jpg?v=1638874682&width=1100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbHvUDzoLyUgvkq-dQEnPSH-P5abYJUqXLQ&s">
+        </div>
+    </section>
+
+    <!-- Grid-template-areas -->
+    <section class="services-section">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+            <div class="service-box">Hair & Scalp Treatment Advice</div>
+            <div class="service-box">Acne Care Program</div>
+            <div class="service-box">Product Ingredient Review</div>
+        </div>
+    </section>
+
+    <!--  Testimonial -->
+    <section class="testimonials-section">
+        <h2>Testimonials</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial">“Amazing quality products! My skin feels brand new.”</div>
+            <div class="testimonial">“Great service and excellent customer care.”</div>
+            <div class="testimonial">“Sha Cosmetics changed my skincare routine forever!”</div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

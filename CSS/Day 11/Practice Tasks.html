@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 Practice Task</title>
+
+ 
+<style>
+    /* Task 01, 02, 03 & 05 */
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr);      
+    gap: 15px;                                
+
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+
+  /* Task 04 */
+
+  .header { 
+    grid-area: header; 
+    background: #88bff3; 
+    padding: 20px;
+  }
+
+  .main { 
+    grid-area: main; 
+    background: #95ec95; 
+    padding: 20px;
+  }
+
+  .footer { 
+    grid-area: footer; 
+    background: #ecc493; 
+    padding: 20px;
+  }
+
+  h1{
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+ <h1> Practice Task </h1>
+<div class="container">
+  <div class="header">Header</div>
+  <div class="main">Main Content</div>
+  <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>

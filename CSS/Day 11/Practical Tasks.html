@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grid Layout Examples – Single Page</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  padding: 20px;
+}
+h2 {
+  margin-top: 50px;
+  color: #1f1f1f;
+}
+
+/* -- BASIC WEBSITE LAYOUT -- */
+.basic-site {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.basic-site header { grid-area: header; background:#cfe8ff; padding:20px; }
+.basic-site aside { grid-area: sidebar; background:#e8e8e8; padding:20px; }
+.basic-site main { grid-area: content; background:#fff6d6; padding:20px; }
+.basic-site footer { grid-area: footer; background:#ffd9d9; padding:20px; }
+
+/* -- PHOTO GALLERY -- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+  padding: 15px;
+  background:#fff;
+  border-radius:6px;
+}
+.gallery img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* -- DASHBOARD LAYOUT -- */
+
+.dashboard {
+        margin-top: 15px;
+        display: grid;
+        grid-template-areas:
+            "nav nav nav"
+            "stats stats charts"
+            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px 200px 60px;
+        gap: 10px;
+    }
+    .dash-nav    { grid-area: nav;    background: #e1ade6; padding: 20px; }
+    .dash-stats  { grid-area: stats;  background: #dac5f6; padding: 20px; }
+    .dash-charts { grid-area: charts; background: #ffa5a5; padding: 20px; }
+    .dash-footer { grid-area: footer; background: #b8f9f6; padding: 20px; }
+
+
+
+/* -- FLEXBOX VS GRID COMPARISON -- */
+.flex-layout,
+.grid-layout {
+  margin-bottom: 20px;
+  padding: 15px;
+  background:#fff;
+  border-radius: 6px;
+}
+
+.flex-layout {
+  display: flex;
+  gap: 10px;
+}
+.flex-layout div {
+  flex: 1;
+  background: #d6ffd6;
+  padding: 20px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.grid-layout div {
+  background: #ffd6d6;
+  padding: 20px;
+}
+
+/* -- BLOG HOMEPAGE -- */
+
+.blog-layout {
+        margin-top: 15px;
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "posts sidebar"
+            "footer footer";
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 70px auto 60px;
+        gap: 10px;
+    }
+    .blog-header  { grid-area: header;  background: rgb(188, 173, 230);  padding: 20px; text-align: center; }
+    .blog-posts   { grid-area: posts;   background: #ffcde9;    padding: 20px; }
+    .blog-sidebar { grid-area: sidebar; background: #fff3c8;    padding: 20px; }
+    .blog-footer  { grid-area: footer;  background: #e0e0e0;    padding: 15px; text-align: center; }
+
+
+h1{
+    text-align: center;
+    
+}
+</style>
+</head>
+
+<body>
+
+<h1><u>Practical Tasks</u></h1>
+
+<!-- 1.TASK -->
+<h2>1.Basic Website Layout</h2>
+<div class="basic-site">
+  <header>Header</header>
+  <aside>Sidebar</aside>
+  <main>Main Content</main>
+  <footer>Footer</footer>
+</div><br><hr>
+
+<!-- 2. TASK -->
+<h2>2.Photo Gallery</h2>
+<div class="gallery">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvb5VlE0O71BTHuXxXEgFGc4eby_HQKtELNQ&s">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Aoq6G3114OYpM6mvf1UAZBZ5Pr6q1B1ckA&s">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfazh7aT4VnuBaTohcRgq_WZPbTkwfzAT7g&s">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5W2bsY2stTcdSQtkaD-foDHCAba3meP5vg&s">
+  <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2024/11/moana-2-13.jpg?q=49&fit=contain&w=750&h=422&dpr=2">
+</div><br><hr>
+
+<!-- 3. TASK -->
+<h2>3.Dashboard Layout</h2>
+<div class="dashboard">
+    <div class="dash-nav">Navigation</div>
+    <div class="dash-stats">Statistics Panel</div>
+    <div class="dash-charts">Charts</div>
+    <div class="dash-footer">Dashboard Footer</div>
+</div><br><hr>
+
+
+<!-- 4. TASK -->
+<h2>4.Flexbox vs Grid Comparison</h2>
+<div class="flex-layout">
+  <div>A</div><div>B</div><div>C</div>
+</div>
+
+<div class="grid-layout">
+  <div>A</div><div>B</div><div>C</div>
+</div><br><hr>
+
+<!-- 5. TASK -->
+<h2>5.Blog Homepage</h2>
+<div class="blog-layout">
+    <div class="blog-header">Blog Header</div>
+    <div class="blog-posts">Blog Section</div>
+    <div class="blog-sidebar">Sidebar</div>
+    <div class="blog-footer">Footer</div>
+</div>
+
+
+</body>
+</html>
