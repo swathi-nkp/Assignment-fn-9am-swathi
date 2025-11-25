@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Practice Tasks</title>
+
+<style>
+
+/* -- 1. Box color transition on hover -- */
+.color-box {
+  width: 150px;
+  height: 150px;
+  background: #4a90e2;
+  transition: background 0.6s ease;
+  margin-bottom: 30px;
+}
+
+.color-box:hover {
+  background: #e94a4a;
+}
+
+/* -- 2. Text sliding animation -- */
+@keyframes slide-right {
+  from { transform: translateX(0); }
+  to   { transform: translateX(200px); }
+}
+
+.slide-text {
+  display: inline-block;
+  animation: slide-right 3s linear infinite alternate;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* -- 3. Image scale on hover -- */
+.grow-img {
+  transition: transform 0.4s ease;
+  margin-bottom: 30px;
+  margin-left: 0%;
+  display: block;
+}
+
+.grow-img:hover {
+  transform: scale(1.2);
+}
+
+/* -- 4. Continuous rotating square -- */
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.rotating-square {
+  width: 100px;
+  height: 100px;
+  background: #6c5ce7;
+  animation: spin 3s linear infinite;
+  margin-bottom: 30px;
+}
+
+/* -- 5. Smooth hover & focus button -- */
+.smooth-btn {
+  padding: 12px 24px;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.smooth-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.smooth-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.5);
+}
+</style>
+
+</head>
+<body style="font-family: Arial; padding: 10px;">
+
+<!-- Task 01 -->
+
+<h2>1. Box Color Transition On Hover</h2>
+
+<div class="color-box"></div>
+
+<!-- Task 02 -->
+
+<h2>2. Text Sliding </h2>
+<p class="slide-text">Sliding Text</p>
+
+<!-- Task 03 -->
+ <h2>3. Image Grow When Hovered</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Aoq6G3114OYpM6mvf1UAZBZ5Pr6q1B1ckA&s"" class="grow-img" alt="Demo Image">
+
+<br>
+
+<!-- Task 04 -->
+
+<h2>4. Continuous Rotating Square</h2>
+<div class="rotating-square"></div>
+
+<!-- Task 05 -->
+
+<h2>5. Focus Effects </h2>
+<button class="smooth-btn">Hover</button>
+
+</body>
+</html>
