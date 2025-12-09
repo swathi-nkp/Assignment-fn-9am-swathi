@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boutique Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Boutique Style -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      background: #fafafa;
+    }
+    .lux-title {
+      font-family: "Playfair Display", serif;
+      letter-spacing: 1px;
+    }
+    /* Prevent Bootstrap affecting Tailwind sections */
+    .tw * {
+      all: unset;
+      display: revert;
+    }
+  </style>
+</head>
+<body>
+
+
+<!--  NAVBAR (Bootstrap)  -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold lux-title fs-3" href="#">Boutique Studio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#landing">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!--  LANDING PAGE (Bootstrap Grid)  -->
+  
+<section id="landing" class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1 class="display-4 fw-bold lux-title">Where Minimalism Meets Luxury</h1>
+      <p class="lead text-muted">
+        A boutique design studio crafting elegant digital experiences for modern brands.
+      </p>
+
+      <button class="btn btn-dark btn-lg me-2">View Portfolio</button>
+      <button class="btn btn-outline-dark btn-lg">Contact Me</button>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <img
+        src="https://img.freepik.com/free-photo/stylish-clothing-boutique-interior_23-2151961902.jpg?semt=ais_hybrid&w=740&q=80"
+        class="img-fluid rounded shadow"
+        alt="Hero"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+<!--  FEATURES SECTION (Tailwind Only) -->
+
+<section id="features" class="tw bg-gray-100 py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl lux-title text-center mb-14">Services</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <div class="p-10 bg-white shadow-sm border border-gray-200 rounded text-center">
+        <h3 class="text-xl font-semibold mb-3">Brand Identity</h3>
+        <p class="text-gray-600">Refined, timeless branding for luxury-forward businesses.</p>
+      </div>
+
+      <div class="p-10 bg-white shadow-sm border rounded text-center">
+        <h3 class="text-xl font-semibold mb-3">Web Design</h3>
+        <p class="text-gray-600">Clean, elegant websites crafted with boutique precision.</p>
+      </div>
+
+      <div class="p-10 bg-white shadow-sm border rounded text-center">
+        <h3 class="text-xl font-semibold mb-3">Creative Direction</h3>
+        <p class="text-gray-600">Visual storytelling and high-end digital experiences.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--  3-CARD LAYOUT (Bootstrap Version)  -->
+
+<section id="portfolio" class="container py-5">
+  <h2 class="text-center mb-5 lux-title fs-1">Selected Work</h2>
+  
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm h-100">
+        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Brand Identity</h5>
+          <p class="card-text text-muted">Luxury package design & visual identity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm h-100">
+        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Web Concept</h5>
+          <p class="card-text text-muted">High-end interface & minimalist layout.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm h-100">
+        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Editorial Design</h5>
+          <p class="card-text text-muted">Aesthetic direction for premium brands.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--   PRICING TABLE (Tailwind)   -->
+
+<section id="pricing" class="tw py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl lux-title text-center mb-14">Boutique Packages</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <div class="p-12 border rounded-xl bg-gray-50 shadow-sm text-center">
+        <h3 class="text-xl font-semibold mb-3">Starter</h3>
+        <p class="text-5xl font-bold mb-4">&#8377;2000</p>
+        <p class="text-gray-600 mb-6">Perfect for small creative projects.</p>
+        <button class="w-full bg-black text-white py-3 rounded">Choose</button>
+      </div>
+
+      <div class="p-12 border-2 border-black rounded-xl shadow-lg text-center bg-white">
+        <h3 class="text-xl font-semibold mb-3">Professional</h3>
+        <p class="text-5xl font-bold mb-4">&#8377;5000</p>
+        <p class="text-gray-600 mb-6">My most requested boutique service.</p>
+        <button class="w-full bg-black text-white py-3 rounded">Choose</button>
+      </div>
+
+      <div class="p-12 border rounded-xl bg-gray-50 shadow-sm text-center">
+        <h3 class="text-xl font-semibold mb-3">Luxury</h3>
+        <p class="text-5xl font-bold mb-4">&#8377;10000</p>
+        <p class="text-gray-600 mb-6">For premium brands seeking full direction.</p>
+        <button class="w-full bg-black text-white py-3 rounded">Choose</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
