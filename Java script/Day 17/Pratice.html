@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-16 Progressive Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="mainTitle">My Portfolio Page</h2>
+    <p>This page contains the information about my achievement and projects.</p>
+
+    <!-- Button interaction -->
+    <button onclick="updateText()">Click Here</button>
+
+    <footer style="margin-top:40px;">
+        © <span id="year"></span> My Portfolio
+    </footer>
+
+    <script>
+        // 1. Welcome alert
+        alert("Welcome to my portfolio page!");
+
+        // 2. Dynamic footer year
+        document.getElementById("year").innerText = new Date().getFullYear();
+
+        // 3. Simple interaction - update text on click
+        function updateText() {
+            document.getElementById("mainTitle").innerText = 
+                "Welcom to Fiarrow's Webpage";
+        }
+
+        // 4. Console experiment
+        console.log("Console test running...");
+        console.log({
+            page: "Portfolio",
+            loadedYear: new Date().getFullYear(),
+            message: "Testing Day-16 integrations"
+        });
+    </script>
+
+</body>
+</html>
