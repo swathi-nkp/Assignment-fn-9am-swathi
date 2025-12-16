@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 17</title>
+</head>
+<body>
+
+  <h1>Welcome to My Portfolio</h1>
+
+  <p id="introText">This is my portfolio.</p>
+  <button onclick="changeText()">Click me</button>
+
+  <footer>
+    <p>© <span id="year"></span> Swathi Portfolio </p>
+  </footer>
+
+  <script>
+
+    //1. Welcome message 
+
+    alert("Welcome to my portfolio!");
+
+    //2. Update footer with the current year
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    //3. Change text on button click
+
+    function changeText() {
+      document.getElementById("introText").textContent =
+        "Thanks for exploring my work!";
+    }
+
+    //4. Use the console to experiment with data
+    
+    console.log("Page loaded successfully");
+    console.log("Current year:", new Date().getFullYear());
+
+  </script>
+
+</body>
+</html>
