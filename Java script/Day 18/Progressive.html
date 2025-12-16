@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18</title>
+</head>
+
+<body>
+
+<h2> Progressive Project </h2>
+
+<h3>Counter</h3>
+<button onclick="decrease()">-</button>
+<span id="count">0</span>
+<button onclick="increase()">+</button>
+
+<script>
+    // 1.Const values 
+
+    const portFolio = "My Portfolio";
+    const copyRight= new Date().getFullYear();
+    const themeColor = "red"
+    const boxColor = " black "
+
+    // 2.let values 
+    let count = 0;
+
+    // 3.UI update
+
+  function increase() {
+    count++;
+    updateUI();
+  }
+
+  function decrease() {
+    count--;
+    updateUI();
+  }
+
+  function updateUI() {
+    document.getElementById("count").innerText = count;
+    document.getElementById("count").style.color = themeColor;
+    document.getElementById("count").style.background = boxColor;
+  }
+
+    // 4.Block scope
+    {
+        let greeting = "Hello from inside a block!";
+        console.log(greeting);
+    }
+
+    // 5.Console testing
+    
+    console.log("Website:", portFolio);
+    console.log("Year:", copyRight);
+    console.log("Counter ready.");
+    
+</script>
+
+</body>
+</html>
+</body>
+</html>
