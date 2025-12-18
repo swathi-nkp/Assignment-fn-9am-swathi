@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title> Day 19 </title>
+</head>
+<body>
+
+<h2>Student App</h2>
+
+<!-- User Input -->
+
+<input id="nameInput" placeholder="Enter your name">
+<button onclick="login()">Login</button>
+<p id="message"></p>
+
+<!-- Numbers -->
+
+<button onclick="showGrade()">Show Grade</button>
+<p id="grade"></p>
+
+<!-- Array -->
+
+<button onclick="showItems()">Show Items</button>
+<ul id="items"></ul>
+
+<!-- Boolean -->
+
+<button onclick="toggleMode()">Toggle Dark Mode</button>
+
+<script>
+
+  // String
+
+  let studentName = "";
+
+  // Numbers
+
+  let score = 80;
+  let bonus = 5;
+
+  // Array
+
+  let items = ["Book", "Pen", "Bag"];
+
+  // Boolean
+  
+  let darkMode = false;
+
+  function login() {
+    studentName = document.getElementById("nameInput").value;
+    document.getElementById("message").innerText =
+      "Hello " + studentName;
+  }
+
+  function showGrade() {
+    document.getElementById("grade").innerText =
+      "Final Score: " + (score + bonus);
+  }
+
+  function showItems() {
+    let list = document.getElementById("items");
+    list.innerHTML = "";
+    for (let i = 0; i < items.length; i++) {
+      list.innerHTML += "<li>" + items[i] + "</li>";
+    }
+  }
+
+  function toggleMode() {
+    darkMode = !darkMode;
+    document.body.style.background =
+      darkMode ? "#333" : "#fff";
+    document.body.style.color =
+      darkMode ? "#fff" : "#000";
+  }
+</script>
+
+</body>
+</html>

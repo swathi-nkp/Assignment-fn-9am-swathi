@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Day 19</title>
+</head>
+<body style="font-family:'Franklin Gothic Medium', 'Arial'; padding : 20px;">
+
+    <h2>Practical Tasks</h2>
+
+
+    <p id="student"></p>
+    <p id="price"></p>
+    <p id="loginStatus"></p>
+    <p id="bigint"></p>
+    <p id="symbols"></p>
+
+    <script>
+
+        //    1. Student Profile (object + strings + numbers)
+
+        const student = {
+            name: "Swathi N",
+            Age: 21,
+            Grade: "B+"
+        };
+        document.getElementById("student").innerText =  
+            "Student Name = " + student.name +
+            ", Age: " + student.Age +
+            ", Grade " + student.Grade;
+
+
+
+        //    2. Product Price Calculator
+        //       (number + string conversion)
+  
+        let price = "100";   // string
+        let quantity = 2;
+
+        let total = Number(price) * quantity;
+        document.getElementById("price").innerText =
+            "Total price = " + total + "Rs";
+
+
+
+     
+        //    3. Login Status Indicator (boolean)
+
+        let isLoggedIn = false;
+
+        document.getElementById("loginStatus").innerText =
+    `Login Status : ${isLoggedIn ? "Logged In" : "Logged Out"}`;
+
+
+
+   
+        //    4. BigInt Large Number Addition
+
+        let big1 = 342575890790089067786n;
+        let big2 = 356787000000000000067n;
+
+        let bigTotal = big1 + big2;
+
+        document.getElementById("bigint").innerText =
+            "BigInt Total = " + bigTotal;
+
+
+
+        //    5. Create 3 users with unique Symbol IDs
+      
+        const user1 = Symbol("User");
+        const user2 = Symbol("User");
+        const user3 = Symbol("User");
+
+        document.getElementById("symbols").innerText =
+            "3 Unique User IDs = " + user1.toString() + ", " +
+            user2.toString() + ", " + user3.toString();
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Practice Tasks</title>
+</head>
+<body>
+<script>
+
+  // 1. Declare variables for all 7 primitive types
+
+  let str = "Hello";          // String
+  let num = 42;               // Number
+  let big = 1234567890123n;   // BigInt
+  let bool = true;            // Boolean
+  let undef;                  // Undefined
+  let empty = null;           // Null
+  let sym = Symbol("id");     // Symbol
+
+  // 2. Check types
+
+  console.log(typeof str);    // string
+  console.log(typeof num);    // number
+  console.log(typeof big);    // bigint
+  console.log(typeof bool);   // boolean
+  console.log(typeof undef);  // undefined
+  console.log(typeof empty);  // object (null)
+  console.log(typeof sym);    // symbol
+
+  // 3. Create an object with 3 properties
+
+  const person = {
+    name: "Swathi N",
+    age: 21,
+    city: "Chennai"
+  };
+
+  console.log(person.name); 
+  console.log(person.age);  
+  console.log(person.city); 
+
+  // 4. Convert "45" to a number
+
+  let numStr = "45";
+  let convertedNumber = Number(numStr);
+  console.log(convertedNumber);        // 45
+  console.log(typeof convertedNumber); // number
+
+  // 5.Convert false to a string
+
+  let flag = false;
+  let stringValue = String(flag);
+  console.log(stringValue);        // "false"
+  console.log(typeof stringValue); // string
+
+</script>
+</body>
+</html>
