@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 21</title>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Day 21 - Practical Tasks</h2>
+
+    <!-- 1. Multiplication Table -->
+
+    <h3>1.Multiplication Table</h3>
+    <input id="numInput" type="number" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate</button>
+    <pre id="tableOutput"></pre><br><hr>
+
+    <!-- 2. Array Search -->
+
+    <h3>2. Array Search Program</h3>
+    <button onclick="searchArray()">Search for 'lotus'</button>
+    <p id="searchResult"></p><br><hr>
+
+    <!-- 3. Password Retries -->
+
+    <h3>3. Password Retry (do…while)</h3>
+    <button onclick="passwordCheck()">Start Login</button><br><br><hr>
+
+    <!-- 4. Cart Total Calculator -->
+
+    <h3>4. Cart Total Calculator</h3>
+    <button onclick="calculateTotal()">Calculate Total</button>
+    <p id="cartTotal"></p><br><hr>
+
+    <!-- 5. Attendance Checker -->
+
+    <h3>5. Attendance Checker</h3>
+    <button onclick="checkAttendance()">Check Attendance</button>
+    <pre id="attendanceOutput"></pre>
+
+
+<script>
+
+    // 1. Multiplication Table 
+
+    function generateTable() {
+        let num = document.getElementById("numInput").value;
+        let result = "";
+
+        for (let i = 1; i <= 10; i++) {
+            result += `${num} x ${i} = ${num * i}\n`;
+        }
+
+        document.getElementById("tableOutput").innerText = result;
+    }
+
+
+
+    // 2. Array Search Program
+    
+    function searchArray() {
+        const flower = ["sunflower", "lotus","jasmine", "rose"];
+        let found = false;
+
+        for (let item of flower) {
+            if (item === "lotus") {
+                found = true;
+                break;
+            }
+        }
+
+        document.getElementById("searchResult").innerText =
+            found ? "lotus found! " : "lotus not found.";
+    }
+
+
+
+    // 3. Password Retries (do…while)
+
+    function passwordCheck(){
+        let password = "3003"
+        let userinput ;
+        do {
+            userinput = prompt("Enter the correct password");
+        }
+
+    while (
+        userinput !== password 
+    );
+
+    alert("login successfully")
+    }
+
+
+    // 4. Cart Total Calculator
+    
+ function calculateTotal() {
+        const prices = [100,150,200]; 
+        let total = 0;
+
+        for (let price of prices) {
+            total += price;
+        }
+
+        document.getElementById("cartTotal").innerText =
+            "Total Cart Value: ₹" + total;
+    }
+
+    // 5. Attendance Checker
+    function checkAttendance(){
+        const students ={
+            Swathi:true,
+            Joe:true,
+            pavi:false,
+            Ranjani:false
+        };
+
+        let output =""
+
+        for (let name in students) {
+            output += `${name}: ${students[name] ? "Present" : "Absent"}\n`;
+        }
+
+        document.getElementById("attendanceOutput").innerText = output;
+    }
+
+
+
+</script>
+
+</body>
+</html>
