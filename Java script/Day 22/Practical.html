@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 22</title>
+</head>
+<body>
+
+<h2>Practical Task</h2>
+
+<!-- Calculator -->
+
+<h3>Calculator Functions</h3>
+<button onclick="showAdd()">Add</button>
+<button onclick="showSubtract()">Subtract</button>
+<button onclick="showMultiply()">Multiply</button>
+<button onclick="showDivide()">Divide</button>
+<p id="calcResult"></p>
+
+<!-- Greeting -->
+
+<h3>Greeting Program</h3>
+<button onclick="showGreeting()">Greet</button>
+<p id="greetResult"></p>
+
+<!-- Grade Checker -->
+
+<h3>Grade Checker</h3>
+<button onclick="showGrade()">Check Grade</button>
+<p id="gradeResult"></p>
+
+<!-- Area Calculator -->
+
+<h3>Area Calculator</h3>
+<button onclick="showArea()">Calculate Area</button>
+<p id="areaResult"></p>
+
+<!-- Login -->
+
+<h3>Login Function</h3>
+<button onclick="checkLogin()">Login</button>
+<p id="loginResult"></p>
+
+<script>
+
+    // Calculator Functions
+    
+    function add(a, b) {
+        return a + b;
+    }
+
+    function subtract(a, b) {
+        return a - b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    function divide(a, b) {
+        return a / b;
+    }
+
+    function showAdd() {
+        document.getElementById("calcResult").innerText = "Add: " + add(10, 5);
+    }
+
+    function showSubtract() {
+        document.getElementById("calcResult").innerText = "Subtract: " + subtract(10, 5);
+    }
+
+    function showMultiply() {
+        document.getElementById("calcResult").innerText = "Multiply: " + multiply(10, 5);
+    }
+
+    function showDivide() {
+        document.getElementById("calcResult").innerText = "Divide: " + divide(10, 5);
+    }
+
+    // Greeting Program
+    function greet(name) {
+        return "Welcome " + name;
+    }
+
+    function showGreeting() {
+        document.getElementById("greetResult").innerText = greet("Swathi");
+    }
+
+    // Grade Checker
+
+    function checkGrade(marks) {
+        if (marks >= 90) return "Grade A";
+        else if (marks >= 75) return "Grade B";
+        else if (marks >= 60) return "Grade C";
+        else if (marks >= 40) return "Grade D";
+        else return "Grade F";
+    }
+
+    function showGrade() {
+        document.getElementById("gradeResult").innerText = checkGrade(78);
+    }
+
+    // Area Calculator
+
+    function areaRectangle(length, width) {
+        return length * width;
+    }
+
+    function showArea() {
+        document.getElementById("areaResult").innerText =
+            "Area: " + areaRectangle(10, 5);
+    }
+
+    // Login Function
+
+    function login(username, password) {
+        if (username === "admin" && password === "1234") {
+            return "Login Successful";
+        } else {
+            return "Try Again";
+        }
+    }
+
+    function checkLogin() {
+        document.getElementById("loginResult").innerText =
+            login("admin", "1234");
+    }
+</script>
+
+</body>
+</html>
