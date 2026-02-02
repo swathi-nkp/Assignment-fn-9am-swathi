@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 25</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Array Methods</h1>
+
+  <h2>1 Reduce – Total of Numbers</h2>
+  <p id="total"></p>
+
+  <h2>2 Filter – Adult Ages (≥18)</h2>
+  <p id="adults"></p>
+
+  <h2>3 2D Array – Students & Marks</h2>
+  <ul id="students"></ul>
+
+  <h2>4 Combine Arrays</h2>
+  <p id="combined"></p>
+
+  <h2>5 Products List (forEach + HTML)</h2>
+  <ul id="productList"></ul>
+
+  <script>
+
+    // 1. reduce()
+    const numbers = [10, 20, 30, 40];
+    const total = numbers.reduce((sum, num) => sum + num, 0);
+    document.getElementById("total").textContent = "Total: " + total;
+
+    // 2. filter()
+    const ages = [12, 17, 18, 21, 16, 25];
+    const adults = ages.filter(age => age >= 18);
+    document.getElementById("adults").textContent = "Adults: " + adults.join(", ");
+
+    // 3. 2D array
+    const studentData = [
+      ["swathi", 85],
+      ["aswitha", 72],
+      ["raji", 90]
+    ];
+
+    const studentList = document.getElementById("students");
+    studentData.forEach(student => {
+      const li = document.createElement("li");
+      li.textContent = `Name: ${student[0]}, Marks: ${student[1]}`;
+      studentList.appendChild(li);
+    });
+
+    // 4. concat & spread
+    const a = [1, 2, 3];
+    const b = [4, 5, 6];
+    const combined = [...a, ...b];
+    document.getElementById("combined").textContent =
+      "Combined Array: " + combined.join(", ");
+
+    // 5. forEach() + HTML
+    const products = ["Laptop", "Phone", "Tablet", "Headphones"];
+    const productList = document.getElementById("productList");
+
+    products.forEach(product => {
+      const li = document.createElement("li");
+      li.textContent = product;
+      productList.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>
