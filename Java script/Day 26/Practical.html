@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .dark {
+      background-color: #121212;
+      color: white;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Dark Mode Button -->
+  <button id="darkModeBtn">Toggle Dark Mode</button>
+
+  <hr>
+
+  <!-- 2. Live Text Input -->
+  <input type="text" id="liveInput" placeholder="Type something...">
+  <p id="liveText"></p>
+
+  <hr>
+
+  <!-- 3. To-Do List -->
+  <input type="text" id="todoInput" placeholder="Add a task">
+  <button id="addTodoBtn">Add Task</button>
+  <ul id="todoList"></ul>
+
+  <hr>
+
+  <!-- 4. Multiple Color Buttons -->
+  <button class="colorBtn">Red</button>
+  <button class="colorBtn">Green</button>
+  <button class="colorBtn">Blue</button>
+
+  <hr>
+
+  <!-- 5. innerHTML example -->
+  <button id="htmlBtn">Insert Formatted Text</button>
+  <p id="htmlText"></p>
+
+  <script>
+    // 1. Dark Mode Toggle
+    const darkBtn = document.getElementById("darkModeBtn");
+    darkBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+
+    // 2. Live Input Text
+    const input = document.getElementById("liveInput");
+    const output = document.getElementById("liveText");
+
+    input.addEventListener("input", () => {
+      output.textContent = input.value;
+    });
+
+    // 3. To-Do List (appendChild & removeChild)
+    const todoInput = document.getElementById("todoInput");
+    const todoList = document.getElementById("todoList");
+    const addTodoBtn = document.getElementById("addTodoBtn");
+
+    addTodoBtn.addEventListener("click", () => {
+      const li = document.createElement("li");
+      li.textContent = todoInput.value;
+
+      li.addEventListener("click", () => {
+        todoList.removeChild(li);
+      });
+
+      todoList.appendChild(li);
+      todoInput.value = "";
+    });
+
+    // 4. Multiple Buttons Changing Colors
+    const colorButtons = document.querySelectorAll(".colorBtn");
+
+    colorButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        document.body.style.backgroundColor = button.textContent.toLowerCase();
+      });
+    });
+
+    // 5. innerHTML with formatted text
+    const htmlBtn = document.getElementById("htmlBtn");
+    const htmlText = document.getElementById("htmlText");
+
+    htmlBtn.addEventListener("click", () => {
+      htmlText.innerHTML = "<b>Bold Text</b> and <i>Italic Text</i> added!";
+    });
+  </script>
+
+</body>
+</html>
