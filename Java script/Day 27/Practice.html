@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 27</title>
+  <style>
+    #hoverText {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button Click Alert -->
+  <button id="alertBtn">Click me</button>
+
+  <br><br>
+
+  <!-- Hover Text -->
+  <p id="hoverText">Hover over me</p>
+
+  <br>
+
+  <!-- Keyboard Input -->
+  <input type="text" placeholder="Type something">
+
+  <br><br>
+
+  <!-- Form -->
+  <form id="myForm">
+    <input type="text" placeholder="Name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <br>
+
+  <!-- Clicked Element Text -->
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+  <script>
+    // 1. Button click alert
+    document.getElementById("alertBtn").addEventListener("click", () => {
+      alert("Button clicked!");
+    });
+
+    // 2. Change text color on hover
+    const hoverText = document.getElementById("hoverText");
+    hoverText.addEventListener("mouseenter", () => {
+      hoverText.style.color = "red";
+    });
+    hoverText.addEventListener("mouseleave", () => {
+      hoverText.style.color = "blue";
+    });
+
+    // 3. Log keyboard input
+    document.addEventListener("keydown", (event) => {
+      console.log("Key pressed:", event.key);
+    });
+
+    // 4. Stop form reload
+    document.getElementById("myForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      alert("Form submitted without page reload");
+    });
+
+    // 5. Display clicked element text
+    document.addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        alert("You clicked: " + event.target.textContent);
+      }
+    });
+
+    
+  </script>
+
+</body>
+</html>

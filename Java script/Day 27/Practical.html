@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 27</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  h2 { margin-top: 40px; }
+  
+  /* Hover Menu */
+  .menu { position: relative; display: inline-block; margin-bottom: 20px; }
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f0f0f0;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .menu-content a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+  }
+  .menu:hover .menu-content { display: block; }
+  
+  /* Login Form */
+  form { margin-bottom: 20px; }
+  form input { margin: 5px 0; padding: 8px; width: 200px; }
+  form button { padding: 8px 12px; }
+
+  /* Click Tracker */
+  #tracker {
+    padding: 20px;
+    border: 1px solid #000;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Interactive Demo Sheet</h1>
+
+<!-- 1. Counter Button -->
+<h2>1.Interactive Counter Button</h2>
+<button id="counterBtn">Clicked 0 times</button>
+
+<!-- 2. Hover-Based Menu -->
+<h2>2.Hover-Based Menu</h2>
+<div class="menu">
+  Hover Me
+  <div class="menu-content">
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+  </div>
+</div>
+
+<!-- 3. Login Form Validation -->
+<h2>3.Login Form Validation</h2>
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button type="submit">Login</button>
+</form>
+
+<!-- 4. Keyboard Shortcut -->
+<h2>4.keyboard Shortcut (Ctrl + S)</h2>
+<p>Press <strong>Ctrl + S</strong> anywhere on this page to trigger an alert.</p>
+
+<!-- 5. Click Tracker -->
+<h2>5.Click Tracker</h2>
+<div id="tracker">Click anywhere in this box!</div>
+<p>Total clicks: <span id="clickCount">0</span></p>
+
+<script>
+  // 1. Counter Button
+  let count = 0;
+  const btn = document.getElementById('counterBtn');
+  btn.addEventListener('click', () => {
+    count++;
+    btn.textContent = `Clicked ${count} times`;
+  });
+
+  // 3. Login Form Validation
+  const form = document.getElementById('loginForm');
+  form.addEventListener('submit', (e) => {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    if (!username || !password) {
+      alert('Please fill in both fields!');
+      e.preventDefault();
+    }
+  });
+
+  // 4. Keyboard Shortcut (Ctrl + S)
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key.toLowerCase() === 's') {
+      e.preventDefault();
+      alert('Ctrl + S pressed!');
+    }
+  });
+
+  // 5. Click Tracker
+  let clicks = 0;
+  const tracker = document.getElementById('tracker');
+  const clickCount = document.getElementById('clickCount');
+  tracker.addEventListener('click', () => {
+    clicks++;
+    clickCount.textContent = clicks;
+  });
+</script>
+
+</body>
+</html>
